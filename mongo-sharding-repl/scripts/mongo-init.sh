@@ -9,7 +9,7 @@ rs.initiate({
 })
 EOF
 
-docker compose exec -T shard1 mongosh --port 27030 --quiet <<EOF
+docker compose exec -T shard1_1 mongosh --port 27030 --quiet <<EOF
 rs.initiate({
   _id: "shard1",
   members: [
@@ -20,7 +20,7 @@ rs.initiate({
 })
 EOF
 
-docker compose exec -T shard2 mongosh --port 27040 --quiet <<EOF
+docker compose exec -T shard2_1 mongosh --port 27040 --quiet <<EOF
 rs.initiate({
   _id: "shard2",
   members: [
